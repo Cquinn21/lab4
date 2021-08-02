@@ -1,5 +1,41 @@
-#logo {
+#logo_img {
     max-width: 5vh;
     display: flex;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+h1 {
+    font: 30px;
+    padding-left: 10px;
+    font-family: 'Dosis', sans-serif;
+}
+
+h2 {
+    padding-left: 30px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.featured_games h2 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.featured_games img {
+    object-fit: cover;
+    width: 40vh;
+    height: 35vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.featured_games {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 20vh;
+}
