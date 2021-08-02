@@ -39,3 +39,8 @@ h2 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 20vh;
 }
+
+.button{
+    height: 25px;
+    width: 25%;
+}
