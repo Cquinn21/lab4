@@ -1,105 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Trust</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Dosis;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
 </head>
 <body>
-    <div class="logo">
-        <img src="images/controller.png" alt="game controller" id="logo_img">
-        <!--<div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
-        <h1>Game Trust</h1>
-    </div>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>Game Trust</h1>
+<hr>
 
 <h2>Featured Games</h2>
 
-<div class="featured_games">
-    <div class= "game_cover"><img src="images/uncharted.jpegp" alt="uncharted photo">
-        <div class="button"><a href="https://www.youtube.com/watch?v=hh5HV4iic1Y" target="_blank" rel="noopener noreferrer"><button class="play"><img src="images/play-button.png" alt="Game Trailer"></button></a>
-        </div>
-    <h2>Uncharted 4: A Thief's End</h2>
-    <p>The story follows Nathan Drake, a now retired treasure hunter, now reunited with his long lost brother Samuel. He must save his brother from a tyrant by seeking Captain Henry Avery's legendary fabled pirate treasure.</p>
-    <p>Genre: Action-adventure, third-person shooter</p>
-    <p>Developer: Naughty Dog</p>
-    <p>Publisher: Sony Interactive Entertainment</p>
-    <p>ESRB Rating: T for Teen for violence, blood, language, suggestive themes, and tobacco Use</p>
-    <p>For more information on Ratings see <a href="https://www.esrb.org/ratings/34425/Uncharted+4%3A+A+Thiefs+End/">ESRB Ratings</a> here. </p>
-
-</div>
-
-<div>
-    <div class="game_cover">
-        <img src="images/Tomb Raider 2013.jpeg" alt="Tomb Raider">
-        <div class="button"><a href="https://www.youtube.com/watch?v=r_WbvIDAcA4" target="_blank" rel="noopener noreferrer"><button class="play"><img src="images/play-button.png" alt="Game Trailer"></button></a></div>
-
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+      <h3>Uncharted 4: A Thief's End</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
     </div>
-    <h2>Tomb Raider</h2>
-    <p>Follows Laura Croft on her first adventure. This is her origin story. As her ship wrecks she starts off as a scared adventurer and becomes a hardened survivor trying to survive a forgotten island. Laura will face many trials and dangers.</p>
-    <p>Genre: Action-adventure</p>
-    <p>Developer: Crystal Dynamics, Feral Interactive</p>
-    <p>Publisher: Square Enix, Feral Interactive</p>
-    <p>ESRB Rating: Rated M for Mature for blood, gore, intense violence, and strong language.</p>
-    <p>For more information, see <a href="https://www.esrb.org/ratings/32731/Tomb+Raider/">ESRB Ratings</a> here.
-    </p>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+<!-- END GRID -->
 </div>
 
-<div>
-    <h2>The Witcher 3: Wild Hunt</h2>
-    <p>Witcher 3 is based on Slavonic Mythology. The player plays as Geralt of Rivia who is a witcher for hire to slay montsters while also searching for his adopted daughter that is in danger.</p>
-    <p>Genre: Action role-playing</p>
-    <p>Developer:CD Projekt, CD Projekt RED</p>
-    <p>Publisher: CD Projekt</p>
-    <p>ESRB Rating: M for Mature for blood and gore, intense violence, nudity, strong language ,strong sexual content, use of alcohol</p>
-    <p> For more information, see <a href="https://www.esrb.org/ratings/36457/The+Witcher+3%3A+Wild+Hunt/">ESRB Ratings</a> here.</p>
+<div class="content">
+  <img src="/w3images/p3.jpg" alt="Bear" style="width:100%">
+  <h3>Some Other Work</h3>
+  <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+  <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
 </div>
 
-<div>
-    <h2>The Medium</h2>
-    <p>Medium follows Marianne, a medium that is able to communicate with the dead. She navigates both spirit world and an abandoned Soviet-era resort in Poland. Marianne will travel to the spirit world to not only help move on the dead, but to avoid monsters and solve puzzles.</p>
-    <p>Genre: Puzzle, Psychological horror, Survival horror, Speculative fiction, Societal</p>
-    <p>Developer: Bloober Team</p>
-    <p>Publishers: Bloober Team, NA PUBLISHING INC.</p>
-    <p>ESRB Rating: Rated M for Mature for strong language, blood, and intense violence</p>
-    <p>ESRB does not have this game listed but you can find more information on <a href="https://www.ign.com/articles/the-medium-ps5-xbox-series-x-pc-rated-esrb"> IGN</a></p>
+<!-- END MAIN -->
 </div>
-
-<div>
-    <h2>Little Nightmares</h2>
-    <p>Following six, a hungry little girl who has to escape the Maw, a hungry vessel that is inhabited by monstrous, twisted beings.</p>
-    <p>Genre: puzzle-platform horror adventure game</p>
-    <p>Developer: Tarsier Studios, Supermassive Games, Engine Software</p>
-    <p>Publishers: BANDAI NAMCO, Namco Bandai Games America Inc.</p>
-    <p>ESRB Rating: Rated T for Teen for blood and violence</p>
-    <p>For more information, see <a href="https://www.esrb.org/ratings/36841/Little+Nightmares/">ESRB Ratings</a> here.</p>
-</div>
-
-<div>
-    <h2>Control</h2>
-    <p>Control is a story about Jesse Faden. She is caught in the middle of a deadly conflict between a secret governtment agency and otherworldly forces that are invading and corrupting reality.</p>
-    <p>Genre: Third-person Shooter, Action-adventure</p>
-    <p>Developer: Remedy Entertainment</p>
-    <p>Publisher: 505 Games</p>
-    <p>ESRB Rating: M for Mature for blood, violence, and strong language</p>
-    <p>For more information, see <a href="https://www.esrb.org/ratings/36329/Control/">ESRB Ratings</a> here.</p>
-</div>
-<div>
-    <h2>Assassin's Creed Valhalla</h2>
-    <p>Assassin's Creed takes place partly in the 21st Century and the years 872-878 AD. It follows modern day Layla Hassan, an assassin, who relives the memories of a viking named Eivor to save the world from destruction.</p>
-    <p>Genre: Action role-playing</p>
-    <p>Developer: Ubisoft Montreal, Ubisoft San Francisco</p>
-    <p>Publisher: Ubisoft, Ubisoft San Francisco</p>
-    <p>ESRB Rating: M for Mature for blood, gore, intense violence, partial nudity, sexual themes, strong language, use of drugs and alcohol</p>
-    <p>For more information, see <a href="https://www.esrb.org/ratings/37243/Assassins+Creed+Valhalla/">ESRB Ratings</a> here.</p>
-</div>
-    
 
 </body>
 </html>
-
