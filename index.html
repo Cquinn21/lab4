@@ -6,13 +6,63 @@
 * {
   box-sizing: border-box;
 }
-
-body {
-  background-color: #deedfd;
-  padding: 20px;
-  font-family: Dosis;
+.container {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
 }
 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(40, 42, 46);
+}
+
+.container:hover .overlay {
+  opacity: 75%;
+  border-radius: 8px;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 75%;
+}
+b {
+  color: rgb(180, 180, 180);
+}
+hr {
+  height: 1px;
+  background-color: rgb(255, 65, 65);
+  border: none;
+}
+body {
+  background-color: rgb(15, 15, 15);
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  font-family: Helvetica;
+}
 
 .main {
   max-width: 1000px;
@@ -25,20 +75,23 @@ h1 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 16px;
   word-break: keep-all;
   }
+
+body {
+  font-size: 13px;
+  word-break: keep-all;
+}
   
 .row {
   margin: 8px -16px;
 }
 
-
 .row,
 .row > .column {
   padding: 8px;
 }
-
 
 .column {
   float: left;
@@ -54,9 +107,9 @@ h3 {
 
 
 .content {
-  border-radius: 14px;
-  background-color: rgb(247, 251, 255);
-  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(40, 42, 46);
+  padding: 12px;
 }
 
 
@@ -72,6 +125,7 @@ h3 {
     width: 100%;
   }
 }
+
 </style>
 </head>
 <body>
@@ -79,23 +133,30 @@ h3 {
 <!-- Center website -->
 <div class="main">
     <div id="image" style="float:left; padding-right: 10px;">
-        <img src="images/controller.png"  align="left" width="60" height="50"/>
+        <img src="images/Controller.svg"  align="left" width="60" height="50"/>
     </div>
 
     <div id="texts" style="left:auto"> 
         <h1>Game Trust</h1> 
     </div>
-<hr>
 
-<h2>Featured Games</h2>
+<div class="content">
+ <div class="container">
+  <img src="images/skyrim.png" alt="Skyrim" class="image" style="border-radius: 8;">
+  <div class="overlay">
+    <div class="text"><a href="https://jalah07.github.io/Lab04/Lab_04_V2/"target=“_blank” style="color: white; font-size: 30px; text-decoration: none;";>See Other Featured Games Here</a></div>
+  </div>
+</div>
+</div>
+<h2>Featured  Games</h2>
 
 <!-- Game Grid -->
 <div class="row">
   <div class="column">
     <div class="content">
-      <img src="images/Uncharted 4.jpeg" alt="Uncharted 4" style="width:100%; border-radius: 12px;">
+      <img src="images/Uncharted 4.jpeg" alt="Uncharted 4" style="width:100%; border-radius: 8px;">
       <center><a href="https://www.youtube.com/watch?v=hh5HV4iic1Y" target="_blank" rel="noopener noreferrer">
-        <img border="0" alt="Uncharted 4 Trailer" src="images/youtube.png" width="50" height="40">
+        <img border="0" alt="Uncharted 4 Trailer" src="images/youtube (1).png" width="50" height="40">
         </a></center>
         <h3 style="text-align: center;">Uncharted 4: A Thief's End</h3>
         <hr>
@@ -104,14 +165,14 @@ h3 {
         <p><b>Developer:</b> Naughty Dog</p>
         <p><b>Publisher:</b> Sony Interactive Entertainment</p>
         <p><b>ESRB Rating:</b> T for Teen for violence, blood, language, suggestive themes, and tobacco Use</p>
-        <p>For more information, see <a href="https://www.esrb.org/ratings/34425/Uncharted+4%3A+A+Thiefs+End/" target=“_blank”>ESRB Ratings</a> here. </p>
+        <p>For more information, see <a href="https://www.esrb.org/ratings/34425/Uncharted+4%3A+A+Thiefs+End/" target=“_blank” style="color: white;">ESRB Ratings</a>. </p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-        <img src="images/tombraider.jpeg" alt="Tomb Raider" style="width:100%; border-radius: 12px;">
+        <img src="images/tombraider.jpeg" alt="Tomb Raider" style="width:100%; border-radius: 8px;">
       <center><a href="https://www.youtube.com/watch?v=r_WbvIDAcA4" target="_blank" rel="noopener noreferrer">
-        <img border="0" alt="Tomb Raider Trailer" src="images/youtube.png" width="50" height="40">
+        <img border="0" alt="Tomb Raider Trailer" src="images/youtube (1).png" width="50" height="40">
         </a></center>
         <h3 style="text-align: center;">Tomb Raider</h3>
         <hr>
@@ -120,14 +181,14 @@ h3 {
         <p><b>Developer:</b> Crystal Dynamics, Feral Interactive</p>
         <p><b>Publisher:</b> Square Enix, Feral Interactive</p>
         <p><b>ESRB Rating:</b>  M for Mature for blood, gore, intense violence, and strong language.</p>
-        <p>For more information, see <a href="https://www.esrb.org/ratings/32731/Tomb+Raider/" target=“_blank”>ESRB Ratings</a> here. </p>
+        <p>For more information, see <a href="https://www.esrb.org/ratings/32731/Tomb+Raider/" target=“_blank” style="color: white;">ESRB Ratings</a>. </p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-        <img src="images/witcher3.jpeg" alt="Witcher 3" style="width:100%; border-radius: 12px;">
+        <img src="images/witcher3.jpeg" alt="Witcher 3" style="width:100%; border-radius: 8px;">
       <center><a href="https://www.youtube.com/watch?v=XHrskkHf958" target="_blank" rel="noopener noreferrer">
-        <img border="0" alt="Witcher 3 Trailer" src="images/youtube.png" width="50" height="40">
+        <img border="0" alt="Witcher 3 Trailer" src="images/youtube (1).png" width="50" height="40">
         </a></center>
         <h3 style="text-align: center;">The Witcher 3: Wild Hunt</h3>
         <hr>
@@ -136,14 +197,14 @@ h3 {
         <p><b>Developer:</b> CD Projekt, CD Projekt RED</p>
         <p><b>Publisher:</b> CD Projekt</p>
         <p><b>ESRB Rating:</b> M for Mature for blood and gore, intense violence, nudity, strong language ,strong sexual content, use of alcohol</p>
-        <p>For more information, see <a href="https://www.esrb.org/ratings/36457/The+Witcher+3%3A+Wild+Hunt/" target=“_blank”>ESRB Ratings</a> here. </p>
+        <p>For more information, see <a href="https://www.esrb.org/ratings/36457/The+Witcher+3%3A+Wild+Hunt/" target=“_blank” style="color: white;">ESRB Ratings</a>. </p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-        <img src="images/valhalla1.jpeg" alt="Assassin's Creed" style="width:100%; border-radius: 12px;">
+        <img src="images/valhalla1.jpeg" alt="Assassin's Creed" style="width:100%; border-radius: 8px;">
       <center><a href="https://www.youtube.com/watch?v=ssrNcwxALS4" target="_blank" rel="noopener noreferrer">
-        <img border="0" alt="Assassin's Creed Trailer" src="images/youtube.png" width="50" height="40">
+        <img border="0" alt="Assassin's Creed Trailer" src="images/youtube (1).png" width="50" height="40">
         </a></center>
         <h3 style="text-align: center;">Assassin's Creed Valhalla</h3>
         <hr>
@@ -152,14 +213,14 @@ h3 {
         <p><b>Developer:</b> Ubisoft Montreal, Ubisoft San Francisco</p>
         <p><b>Publisher:</b> Ubisoft, Ubisoft San Francisco</p>
         <p><b>ESRB Rating:</b> M for Mature for blood, gore, intense violence, partial nudity, sexual themes, strong language, use of drugs and alcohol</p>
-        <p>For more information, see <a href="https://www.esrb.org/ratings/37243/Assassins+Creed+Valhalla/" target=“_blank”>ESRB Ratings</a> here. </p>
+        <p>For more information, see <a href="https://www.esrb.org/ratings/37243/Assassins+Creed+Valhalla/" target=“_blank” style="color: white;">ESRB Ratings</a>. </p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-        <img src="images/control1.jpeg" alt="Control" style="width:100%; border-radius: 12px;">
+        <img src="images/control1.jpeg" alt="Control" style="width:100%; border-radius: 8px;">
       <center><a href="https://www.youtube.com/watch?v=F74LLDhAhhI" target="_blank" rel="noopener noreferrer">
-        <img border="0" alt="Control Game Trailer" src="images/youtube.png" width="50" height="40">
+        <img border="0" alt="Control Game Trailer" src="images/youtube (1).png" width="50" height="40">
         </a></center>
         <h3 style="text-align: center;">Control</h3>
         <hr>
@@ -168,14 +229,14 @@ h3 {
         <p><b>Developer:</b> Remedy Entertainment</p>
         <p><b>Publisher:</b> 505 Games</p>
         <p><b>ESRB Rating:</b> M for Mature for blood, violence, and strong language</p>
-        <p>For more information, see <a href="https://www.esrb.org/ratings/36329/Control/" target=“_blank”>ESRB Ratings</a> here. </p>
+        <p>For more information, see <a href="https://www.esrb.org/ratings/36329/Control/" target=“_blank” style="color: white;">ESRB Ratings</a>. </p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-        <img src="images/nightmares.png" alt="Little Nightmares" style="width:100%; border-radius: 12px;">
+        <img src="images/nightmares.png" alt="Little Nightmares" style="width:100%; border-radius: 8px;">
       <center><a href="https://www.youtube.com/watch?v=aOadxZBsPiA" target="_blank" rel="noopener noreferrer">
-        <img border="0" alt="Little Nightmares Game Trailer" src="images/youtube.png" width="50" height="40">
+        <img border="0" alt="Little Nightmares Game Trailer" src="images/youtube (1).png" width="50" height="40">
         </a></center>
         <h3 style="text-align: center;">Little Nightmares</h3>
         <hr>
@@ -184,14 +245,14 @@ h3 {
         <p><b>Developer:</b> Tarsier Studios, Supermassive Games, Engine Software</p>
         <p><b>Publisher:</b> BANDAI NAMCO, Namco Bandai Games America Inc.</p>
         <p><b>ESRB Rating:</b> T for Teen for blood and violence</p>
-        <p>For more information, see <a href="https://www.esrb.org/ratings/36841/Little+Nightmares/" target=“_blank”>ESRB Ratings</a> here. </p>
+        <p>For more information, see <a href="https://www.esrb.org/ratings/36841/Little+Nightmares/" target=“_blank” style="color: white;">ESRB Ratings</a>. </p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-        <img src="images/medium.jpeg" alt="The Medium" style="width:100%; border-radius: 12px;">
+        <img src="images/medium.jpeg" alt="The Medium" style="width:100%; border-radius: 8px;">
       <center><a href="https://www.youtube.com/watch?v=iJCE9umarQ0" target="_blank" rel="noopener noreferrer">
-        <img border="0" alt="The Medium Game Trailer" src="images/youtube.png" width="50" height="40">
+        <img border="0" alt="The Medium Game Trailer" src="images/youtube (1).png" width="50" height="40">
         </a></center>
         <h3 style="text-align: center;">The Medium</h3>
         <hr>
@@ -200,14 +261,14 @@ h3 {
         <p><b>Developer:</b> Bloober Team</p>
         <p><b>Publisher:</b> Bloober Team, NA PUBLISHING INC.</p>
         <p><b>ESRB Rating:</b> M for Mature for strong language, blood, and intense violence</p>
-        <p>For more information, see <a href="https://www.ign.com/articles/the-medium-ps5-xbox-series-x-pc-rated-esrb" target=“_blank”>IGN</a> here. </p>
+        <p>For more information, see <a href="https://www.ign.com/articles/the-medium-ps5-xbox-series-x-pc-rated-esrb" target=“_blank” style="color: white;">IGN</a>. </p>
     </div>
   </div>
   <div class="column">
     <div class="content">
-        <img src="images/dishonored2.jpeg" alt="Dishonored 2" style="width:100%; border-radius: 12px;">
+        <img src="images/dishonored2.jpeg" alt="Dishonored 2" style="width:100%; border-radius: 8px;">
       <center><a href="https://www.youtube.com/watch?v=7bLNC8VDTlQ" target="_blank" rel="noopener noreferrer">
-        <img border="0" alt="Dishonored 2 Game Trailer" src="images/youtube.png" width="50" height="40">
+        <img border="0" alt="Dishonored 2 Game Trailer" src="images/youtube (1).png" width="50" height="40">
         </a></center>
         <h3 style="text-align: center;">Dishonored 2</h3>
         <hr>
@@ -216,7 +277,7 @@ h3 {
         <p><b>Developer:</b> Arkane Studios</p>
         <p><b>Publisher:</b> Bethesda Softworks</p>
         <p><b>ESRB Rating:</b> M for Mature for blood, gore, intense violence, strong language, and suggestive themes.</p>
-        <p>For more information, see <a href="https://www.esrb.org/ratings/34591/Dishonored+2/" target=“_blank”>ESRB Ratings</a> here. </p>
+        <p>For more information, see <a href="https://www.esrb.org/ratings/34591/Dishonored+2/" target=“_blank” style="color: white;">ESRB Ratings</a>. </p>
     </div>
   </div>
 
