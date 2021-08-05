@@ -149,23 +149,24 @@ body {
   <script type="text/javascript"> 
     var checkAge = window.prompt("Please enter your age:")
     var name = window.prompt("Please enter your name?")
+
     
   
     if (checkAge < 16){
   
       window.alert("You entered " + checkAge + " years old, " + name + ".");
       window.alert("You must be 16 to visit this site.");
-      window.location.href("https://www.google.com");
+      window.location.href= "https://www.google.com";
     }
   
     else if (checkAge >= 16 && checkAge < 101){
       
-      window.alert("Hello " + name + ". Welcome to GameTrust!")
+      window.alert("Hello " + name + ". Welcome to Game Trust!")
     }
     
     else {
       window.alert("Are you really that old?");
-      window.location.href("https://www.google.com");
+      window.location.href = "https://www.google.com";
     }
     
   </script>
