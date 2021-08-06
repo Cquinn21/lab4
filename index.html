@@ -147,9 +147,6 @@ body {
 <script type="text/javascript"> 
     var checkAge = window.prompt("Please enter your age:")
     
-
-    
-  
     if (checkAge < 16){
   
       window.alert("You entered " + checkAge + " years old.");
@@ -176,15 +173,42 @@ body {
     <div id="texts" style="left:auto"> 
         <h1>Game Trust</h1> 
     </div>
-
-<div class="content">
- <div class="container">
-  <img src="images/skyrim.png" alt="Skyrim" class="image" style="border-radius: 8;">
-  <div class="overlay">
-    <div class="text"><a href="https://jalah07.github.io/Lab04/Lab_04_V2/"target=“_blank” style="color: white; font-size: 2.3vw; text-decoration: none;";>See Other Featured Games Here</a></div>
+<br>
+<style>
+  .mySlides {display:none;}
+  </style>
+  </head>
+  
+  <div class="content">
+    <div class="container">
+    <img class="mySlides" src="images/skyrim2.png" style="width:100%; border-radius: 8px;">
+    <img class="mySlides" src="images/cyberpunk.png" style="width:100%; border-radius: 8px;">
+    <img class="mySlides" src="images/Destiny2.png" style="width:100% ; border-radius: 8px;">
+    <img class="mySlides" src="images/valorant.jpeg" style="width:100%; border-radius: 8px;">
+    <div class="overlay">
+    <div class="text"><a href="https://jalah07.github.io/Lab04/Lab_04_V2/" target=“_blank” style="color: white; font-size: 2.3vw; text-decoration: none" onclick="return confirm('Are you sure, you want to leave this page?')"> See Other Featured Games Here</a>
+      
+    </div>
   </div>
-</div>
-</div>
+  </div>
+
+  <script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+  }
+  </script>
+  
 <br>
 <h2>Featured  Games</h2>
 
